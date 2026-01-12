@@ -1,4 +1,6 @@
 *.o
-build/
-.vscode/
 *.log
+build
+.vscode
+valgrind-out.txt
+test.sh.log
