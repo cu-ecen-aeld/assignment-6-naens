@@ -1,0 +1,35 @@
+#!/bin/bash
+
+. /etc/init.d/functions
+
+start() {
+    insmod /lib/modules/$(uname -r)/extra/scull.ko
+    major=$(awk "\$2==\"scull\" {print \$1}" /proc/devices)
+    rm -f /dev/scull
+    mknod /dev/scull c $major 0
+}
+
+stop() {
+    rmmod /lib/modules/$(uname -r)/extra/scull.ko
+    rm -f /dev/scull
+}
+
+case "$1" in 
+    start)
+       start
+       ;;
+    stop)
+       stop
+       ;;
+    restart)
+       stop
+       start
+       ;;
+    status)
+       # code to check status of app comes here 
+       # example: status program_name
+       ;;
+    *)
+       echo "Usage: $0 {start|stop|status|restart}"
+esac
+

@@ -1,0 +1,23 @@
+From 221d479abbd06bed48295085f801f9599be4cb59 Mon Sep 17 00:00:00 2001
+From: naens <naens@gmx.com>
+Date: Sun, 18 Jan 2026 17:33:08 +0100
+Subject: [PATCH] makefile: update
+
+---
+ Makefile | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 7b08c49..eb6ed25 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,8 +1,5 @@
+ 
+-SUBDIRS =  misc-progs misc-modules \
+-           skull scull scullc scullp lddbus sculld scullv shortprint simple tty \
+-	   pci usb\
+-	   sbull snull short
++SUBDIRS = misc-modules scull
+ 
+ all: subdirs
+ 
