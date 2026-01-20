@@ -5,7 +5,7 @@ DESCRIPTION = "${SUMMARY}"
 LICENSE = "GPL-3.0-only"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-3.0-only;md5=c79ff39f19dfec6d293b95dea7b07891"
 
-SRC_URI = "git://git@github.com/naens/coursea-embedded-assignment7.git;protocol=ssh;branch=master \
+SRC_URI = "git://git@github.com/naens/coursera-embedded-assignment7.git;protocol=ssh;branch=master \
 	   "
 
 SRC_URI += "file://misc-modules_init"
